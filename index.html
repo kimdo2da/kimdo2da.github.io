@@ -6,6 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @charset "utf-8";
+/* CSS Document */
+
+*{
+    margin:0;
+    padding:0;
+}
+.box{
+    width:100px;
+    height:100px;
+    background:red;
+}
+
+div.canvas{
+    width:1200px;
+    height:700px;
+    position:relative;
+    border:3px solid rgb(0, 0, 0);
+    overflow:hidden;
+}
+div.panel{
+    width:3000px;
+    position:absolute;
+    left:0;
+    top:0;
+    height:700px;
+}
+div.panel img{
+    width:600px;
+    height:700px;
+    float:left;
+}
+
+@keyframes slide{
+    from{
+        left:0;
+        }
+    10%{
+        left:0;
+    }
+    20%{
+        left:-500px;
+        }
+    30%{
+        left:-500px;
+        }       
+    40%{
+        left:-1000px;
+        }
+    50%{
+        left:-1000px;
+        }       
+    60%{
+        left:-1500px;
+        }
+    70%{
+        left:-1500px;
+        }       
+    80%{
+        left:-2000px;
+        }
+    100%{
+        left:-2000px;
+        }
+}
+
+div.panel{
+    animation-name:slide;
+    animation-duration:10s;
+    animation-direction:alternate;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-out;
+}
+
+div.panel:hover{
+        animation-play-state:paused;
+}
         header{
             width: 100%;
             height: 100px;
@@ -35,9 +112,6 @@
             float: left;
             border: 0px solid #cccccc;
         }
-        .section:hover {
-         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-          }
         aside{
             float: left;
             margin-top: 10px;
@@ -89,18 +163,29 @@
     </header>
     <nav>
         <ul>
-            <li><a href="(1).html">all</li></a>
-            <li><span style="color:red"><strong><a href="(2).html">set</li></a></span></strong>
-            <li><a href="(3).html">body</li></a>
-            <li><a href="(4).html">face</li></a>
+            <li><a href="index(1).html">all</li></a>
+            <li><span style="color:red"><strong><a href="index(2).html">set</li></a></span></strong>
+            <li><a href="index(3).html">body</li></a>
+            <li><a href="index(4).html">face</li></a>
             
         </ul> </nav>
     <section>
+        <div class="canvas">
+            <div class="panel">
+             <a href="https://www.themedicube.co.kr/product/detail.html?product_no=9&cate_no=467&display_group=1">
+             <img src="./images/화장품3.png" width="650px" height="800px"></a> 
         <a href="https://not4u.kr/product/detail.html?product_no=25&cate_no=24&display_group=1">
-        <img src="화장품.png" width="650px" height="800px"></a>
+        <img src="./images/화장품.png" width="650px" height="800px"></a>
         <a href="https://themedicube.co.kr/product/detail.html?product_no=40&cate_no=467&display_group=1">
-        <img src="화장품2.png" width="543px"></a>
+        <img src="./images/화장품2.png" width="543px"></a>
+        <a href="https://not4u.kr/product/detail.html?product_no=87&cate_no=24&display_group=1">
+            <img src="./images/화장품4.png" width="650px" height="800px"></a>
+            <a href="https://mefactory.co.kr/product/event3%EB%8B%A8-%EB%8F%BC%EC%A7%80%EC%BD%94%ED%8C%A9-10%EB%A7%A4%EC%9E%85/32/category/103/display/1/?list=%EC%83%81%ED%92%88%EB%B6%84%EB%A5%98_">
+                <img src="./images/화장품5.png" width="500px" height="800px"></a>
+    </div>
+    </div>
     </section>
+
     
     <div class="clear"></div>
     
