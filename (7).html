@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!doctype html>
+    <style type="text/css">
+        #slide {
+            border:1px solid #000;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px #333;
+            }
+        #content{
+            font-size: 20px;
+            margin:80px 0;
+            text-align:center;
+            }
+        header{
+            width: 100%;
+            height: 100px;
+            border: 0px solid #cccccc;
+            margin-top: 10px;
+        }
+        #logo{
+            float: left;
+            margin: 20px;
+            border-bottom: 3px dotted gray;
+        }
+        #top{
+            float:right;
+            margin:20px;
+        }
+        .date{
+            font-size :10px;
+            color: pink;
+        }
+        .time{
+            color: pink;
+        }
+
+        nav{
+            border: 0px solid #f7efef;
+            width: 70%;
+            height: 70px;
+            margin-top: 10px;
+        }
+        nav li{
+            display: inline;
+            margin: 50px 50px;
+        }
+       
+      
+        footer{
+            border:1px solid #f8f6f6;
+            width: 100%;
+            height: 150px;
+            margin-top: 100px;
+        }
+        .clear{
+            clear: both;
+        }
+        #address{
+          
+            float: left;
+            margin-top: 30px;
+            padding-left: 10px;
+           
+        }
+        #customer{
+           
+            float: right;
+            margin-top: 30px;
+            padding-right: 10px;
+        }
+        #page{
+                width:1200px;
+                margin: auto;
+                border: 1px solid #cccccc;
+        }
+    </style>
+    <script type="text/javascript">
+    var image1=new Image();
+       image1.src="./images/event.1.png";
+     var image2=new Image();
+       image2.src="./images/event.2.png";
+     var image3=new Image();
+       image3.src="./images/event.3.png";
+       var image4=new Image();
+       image4.src="./images/event.4.png";
+      
+        function setClock(){
+            var dateInfo = new Date(); 
+           var hour = modifyNumber(dateInfo.getHours());  
+            var min = modifyNumber(dateInfo.getMinutes());
+            var sec = modifyNumber(dateInfo.getSeconds());
+            var year = dateInfo.getFullYear();
+            var month = dateInfo.getMonth()+1; //monthIndex를 반환해주기 때문에 1을 더해준다.
+            var date = dateInfo.getDate();
+            document.getElementById("time").innerHTML = hour + ":" + min  + ":" + sec;
+            document.getElementById("date").innerHTML = year + "년 " + month + "월 " + date + "일";
+        }
+        function modifyNumber(time){
+            if(parseInt(time)<10){
+                return "0"+ time;
+            }
+            else
+                return time;
+        }
+        window.onload = function(){
+            setClock();
+            setInterval(setClock,1000); //1초마다 setClock 함수 실행
+        }
+          
+        </script>      
+           
+    <header>
+        <div id="logo">
+            <a href="index.html">화장품 가게</a>
+        </div>
+        <div id ="top">
+            | <a href="index(5).html">로그인</a>  |    <a href="index(6).html">회원가입</a>   |
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index(1).html">all</li></a>
+            <li><span style="color:red"><strong><a href="index(2).html">set</li></a></span></strong>
+            <li><a href="index(3).html">body</li></a>
+            <li><a href="index(4).html">face</li></a>
+            <li><a href="index(7).html">event</a></li>
+            
+        </ul> </nav>
+        <body id="page">
+            <div id="time" class="time"></div>
+            <div id="date" class="date"></div>
+            <div id="content">
+                <img id="slide" src="test00.jpg" name="slide" width="600" height="350"><br/>
+                [~12월 21일까지의 이벤트 품목]
+                </div>
+                <script type="text/javascript">
+                var step=1;
+                function slideit(){
+                    document.images.slide.src=eval("image"+step+".src");
+                if (step<4)
+                    step++;
+                else
+                    step=1;
+                    setTimeout("slideit()",2500);
+                }
+                slideit();
+                </script>
+            
+            </body>
+    
+    
+
+    <footer>
+        <div class="clear"></div>
+        <div id ="address">
+            <p></p><p></p><p></p>
+        회사소개  |   이용약관  | 개인정보처리방침  | 멤버십  | 고객센터 |
+        </div>
+        <div id ="customer">
+         회사 전화번호 0000-0000<p>
+         상담시간 9:00~18:00</p><p>
+         점심시간 12:00~ 13:30</p>
+        </div>
+    </footer>
+
+</head>
+</html>
