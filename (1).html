@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
     <title>Document</title>
     <style>
  
@@ -160,13 +161,18 @@
 
           
    </section>
+            $(document).ready(function(){
+	$('#imt').on('click',function fj(){
+	    $(location).attr('href',"https://themedicube.co.kr/shopinfo/company.html?board_no=8101");
+    });
+});
     
     <div class="clear"></div>
    
     <footer>
         <div id ="address">
             <p></p><p></p><p></p>
-        회사소개  |   이용약관  | 개인정보처리방침  | 멤버십  | 고객센터 |
+       <span id="imt">회사소개</span>   |   이용약관  | 개인정보처리방침  | 멤버십  | 고객센터 |
         </div>
         <div id ="customer">
          회사 전화번호 0000-0000<p>
