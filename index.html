@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+	<script src="jquery-3.6.0.min.js"></script>
     <style >
         
 
@@ -133,6 +134,12 @@ div.panel img{
     function movepig(){
        location.href= "https://mefactory.co.kr/product/event3%EB%8B%A8-%EB%8F%BC%EC%A7%80%EC%BD%94%ED%8C%A9-10%EB%A7%A4%EC%9E%85/32/category/103/display/1/?list=%EC%83%81%ED%92%88%EB%B6%84%EB%A5%98_";
     }
+	     
+$(document).ready(function(){
+	$('#imt').on('click',function fj(){
+	    $(location).attr('href',"(2).html");
+    });
+});
   </script>
     
     <header>
@@ -213,7 +220,7 @@ div.panel img{
         <div class="clear"></div>
         <div id ="address">
             <p></p><p></p><p></p>
-        회사소개  |   이용약관  | 개인정보처리방침  | 멤버십  | 고객센터 |
+		<span id="imt">회사소개</span>  |   이용약관  | 개인정보처리방침  | 멤버십  | 고객센터 |
         </div>
         <div id ="customer">
          회사 전화번호 0000-0000<p>
