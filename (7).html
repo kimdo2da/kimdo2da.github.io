@@ -135,7 +135,13 @@ div.panel{
             setInterval(setClock,1000); //1초마다 setClock 함수 실행
         }
                                   
-                                   
+                     
+$(document).ready(function(){
+	$('#imt').on('click',function fj(){
+	    $(location).attr('href',"https://themedicube.co.kr/shopinfo/company.html?board_no=8101");
+    });
+});
+              
     
           
         </script>      
@@ -197,7 +203,7 @@ div.panel{
         <div class="clear"></div>
         <div id ="address">
             <p></p><p></p><p></p>
-        회사소개  |   이용약관  | 개인정보처리방침  | 멤버십  | 고객센터 |
+        <span id="imt">회사소개</span>   |   이용약관  | 개인정보처리방침  | 멤버십  | 고객센터 |
         </div>
         <div id ="customer">
          회사 전화번호 0000-0000<p>
